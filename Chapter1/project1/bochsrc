@@ -1,0 +1,21 @@
+###############################################
+# Configuration file for Bochs
+###############################################
+
+# 1. Set the memory of virtual machine to 32MB.
+megs: 32MB
+
+# 2. Set the BIOS and VGA BIOS of the  virtual machine.
+romimage: file=$BXSHARE/BIOS-bochs-latest
+vgaromimage: file=$BXSHARE/VGABIOS-lgpl-latest
+
+# 3. Select which device to startup, that is, the BIOS reads the first partition of this hard disk as MBR partition.
+boot: disk
+
+# 4. Set the output of the log file.
+log: log.bochsrc.disk
+
+ # 5. Turn some functions on or off.
+# The following is to turn off the mouse and turn on the keyboard.
+mouse: enabled=0
+keyboard: keymap=$BXSHARE/keymaps/x11-pc-us.map
